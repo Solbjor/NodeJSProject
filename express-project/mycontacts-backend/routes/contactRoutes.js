@@ -13,19 +13,20 @@ const {getContacts,
     deleteContact ,
 } = require("../controllers/contactController");
 
-router.route('/').get(getContacts);
+router.route('/').get(getContacts).post(createContact);
 
 // Creates new contact
-router.route('/').post(createContact);
+// router.route('/').post(createContact); commented out to save space and simplify.
 
-// Gets individual contact id
-router.route('/:id').get(getContact);
+// Gets individual contact id, update contact, and delete. They all have the same route /:id so we can stack
+// them to simplify
+router.route('/:id').get(getContact).put(updateContact).delete(deleteContact);
 
 // Updates contact id
-router.route('/:id').put(updateContact);
+// router.route('/:id').put(updateContact);
 
 // Deletes contact for id
-router.route('/:id').delete(deleteContact);
+// router.route('/:id').delete(deleteContact);
 
 
 module.exports = router;
