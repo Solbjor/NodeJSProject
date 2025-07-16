@@ -1,7 +1,6 @@
 // Contains all the logic for the controllers/requests to the server in one centralized
 // file for simplicity
 
-
 //@desc Get all contacts
 //@route GET /api/contacts
 //@access public
@@ -16,6 +15,7 @@ const getContacts = (req, res) => {
 //@access public
 
 const createContact = (req, res) => {
+    console.log("The request body is :", req.body);
     res.status(201).json({message: "Create Contact"});
 };
 

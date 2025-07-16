@@ -8,6 +8,10 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // Middleware
+
+// Provides a parser to parse data stream from client requests
+app.use(express.json());
+
 app.use("/api/contacts", require("./routes/contactRoutes"));
 
 // listener
