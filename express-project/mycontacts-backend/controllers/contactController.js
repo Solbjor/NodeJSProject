@@ -75,11 +75,11 @@ const deleteContact = asyncHandler( async (req, res) => {
         throw new Error("Contact not found");
     }
     // Delete contact with id
-    await contact.deleteOne(); // ✅ Correct way
+    await contact.deleteOne(); // ✅ Correct way/method
     res.status(200).json(contact);
 });
 
-// Export all methods
+// Export all methods 
 
 module.exports = { 
     getContacts, 
