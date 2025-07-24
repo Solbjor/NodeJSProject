@@ -1,3 +1,5 @@
+// Mongoose object to store information
+
 const mongoose = require("mongoose");
  
 // Has values/fields for our contact object 
@@ -21,4 +23,4 @@ const contactSchema = mongoose.Schema(
     }
 );
 
-module.exports = mongoose.model("Contact", contactSchema)
+module.exports = mongoose.model("Contact", contactSchema);
